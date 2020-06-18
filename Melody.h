@@ -1,0 +1,79 @@
+#pragma once
+
+Note melody[] {
+	
+	// OPENING
+	{NOTE_DS4, 650, 70},
+	{NOTE_DS4, 650, 70},
+	{NOTE_DS4, 650, 70},
+	{NOTE_AS3, 650, 70},
+	{NOTE_FS3, 650, 70},
+	{NOTE_CS4, 300, 70},
+	{NOTE_B3, 900, 1200}, 
+	{NOTE_AS3, 350, 30},
+	{NOTE_DS4, 700, 70},
+	{NOTE_DS4, 950, 130},
+	{NOTE_AS3, 300, 30},
+	{NOTE_DS4, 600, 70},
+	{NOTE_AS3, 600, 30},
+	{NOTE_FS3, 700, 70},
+	{NOTE_CS4, 900, 70},
+	{NOTE_FS3, 1100, 2000}, // 147700
+
+	// OPENING 2
+	{NOTE_FS4, 1350, 50},
+	{NOTE_F4, 310, 30},
+	{NOTE_DS4, 1000, 20},
+
+	{NOTE_DS4, 400, 50},
+	{NOTE_CS4, 400, 50},
+
+	{NOTE_DS3, 450, 450},
+	{NOTE_CS4, 250, 200},
+	{NOTE_FS4, 250, 75},
+	{NOTE_DS4, 200, 1225},
+
+
+
+	// HAAA HAHAHAAAAAAAA
+	{NOTE_FS5, 240, 0},
+	{NOTE_DS5, 240, 0},
+	{NOTE_CS5, 240, 0},
+	{NOTE_DS5, 240, 0},
+	{NOTE_FS5, 240, 0},
+	{NOTE_DS5, 240, 0},
+	{NOTE_CS5, 240, 0},
+	{NOTE_DS5, 240, 0},
+	{NOTE_CS5, 230, 10},
+	{NOTE_AS4, 400, 50},
+	{NOTE_AS5, 800, 100},
+
+
+
+{NOTE_AS4, 460, 190},
+{NOTE_AS4, 180, 90}, 
+{NOTE_AS4, 250, 200}, 
+
+{NOTE_FS4, 200, 130},// 430
+{NOTE_F4, 170, 170},//20 + 225 + 245
+{NOTE_DS4, 210, 250},
+
+{NOTE_DS4, 150, 70},
+
+
+{NOTE_DS4, 150, 75},
+{NOTE_AS4, 150, 75},
+{NOTE_GS4, 150, 75},
+{NOTE_AS4, 150, 75},
+{NOTE_GS4, 150, 300},
+
+{NOTE_AS4, 150, 75}, // *
+{NOTE_AS4, 150, 75},
+{NOTE_AS4, 150, 75}, // *
+{NOTE_DS4, 150, 75},
+
+{NOTE_FS4, 240, 110}, // *
+{NOTE_DS4, 110, 75},
+
+
+};

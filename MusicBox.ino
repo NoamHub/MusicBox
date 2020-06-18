@@ -1,4 +1,7 @@
 #include "Tone.h"
+#include "BuzzController.h"
+#include "Melody.h"
+#include "Drums.h"
 
 const int buzz1Pin = 7;
 const int buzz2Pin = 8;
@@ -20,60 +23,6 @@ void Error(int T)
   }
 }
 
-
-typedef struct Note{
-  uint16_t sound;
-  uint16_t time;
-  uint16_t silence;
-} Note;
-
-
-class BuzzController{
- Tone* Buzz;
- Note* Notes;
- int NumOfNotes;
- int TimeForNextNote;
- int CurrentNote;
- bool ShouldPlay;
-
-public: 
-  BuzzController(Tone* Buzz, Note* Notes, int NumOfNotes) : CurrentNote(0), Buzz(Buzz), Notes(Notes), NumOfNotes(NumOfNotes)
-  {
-    TimeForNextNote = Notes[CurrentNote].time + Notes[CurrentNote].silence;
-    ShouldPlay = true;
-  }
-
-  void Play(int TimeToRecude)
-  {
-    if (TimeToRecude > TimeForNextNote)
-      Error(500);
-      
-    if (ShouldPlay)
-    {
-      Buzz->play(Notes[CurrentNote].sound + 10, Notes[CurrentNote].time);
-      ShouldPlay = false;
-    }
-
-    if (TimeForNextNote == TimeToRecude)
-    {
-      CurrentNote++;
-      TimeForNextNote = Notes[CurrentNote].time + Notes[CurrentNote].silence;
-      ShouldPlay = true;
-    }
-    else
-      TimeForNextNote -= TimeToRecude;
-  }
-
-  int GetTimeForNextNote()
-  {
-    return TimeForNextNote;
-  }
-
-  int IsDone()
-  {
-    return (CurrentNote == NumOfNotes);
-  }
-};
 
 
 void setup(){
@@ -210,54 +159,41 @@ void Checkval(int a, int b)
 
 
 
-Note song1[] {
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-};
 
-Note song2[] {
-{NOTE_FS4, 1350, 50},
-{NOTE_F4, 310, 30},
-{NOTE_DS4, 1000, 20},
 
-{NOTE_DS4, 400, 50},
-{NOTE_CS4, 400, 50},
 
-{NOTE_DS3, 450, 450},
-{NOTE_CS4, 250, 200},
-{NOTE_FS4, 250, 75},
-{NOTE_DS4, 200, 1225},
-};
-
-#define NOTES (sizeof(song1) / sizeof (Note))
+#define NUM_OF(song) (sizeof(song) / sizeof (Note))
 
 
 
 void loop(){
 int minTime;
-BuzzController Control1(&Buz1, song1, NOTES);
-BuzzController Control2(&Buz2, song2, NOTES);
+BuzzController Control1(&Buz1, drums, NUM_OF(drums));
+BuzzController Control2(&Buz2, melody, NUM_OF(melody));
 
 
-while(!Control1.IsDone() && !Control2.IsDone())
+if (0)
 {
-  //Error(1000);
-  minTime = min(Control1.GetTimeForNextNote(), Control2.GetTimeForNextNote());
-  Control1.Play(minTime);
-  Control2.Play(minTime);
-  delay(minTime);
+  while(!Control2.IsDone())
+  {
+    minTime = (Control2.GetTimeForNextNote());
+    Control2.Play(minTime);
+    delay(minTime);
+  }
+}
+else 
+{
+  while(!Control1.IsDone() && !Control2.IsDone())
+  {
+    //Error(1000);
+    minTime = min(Control1.GetTimeForNextNote(), Control2.GetTimeForNextNote());
+    Control1.Play(minTime);
+    Control2.Play(minTime);
+    delay(minTime);
+  }
 }
 
- Error(1000);
+Error(1000);
 
 
 while(1);
