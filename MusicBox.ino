@@ -1,5 +1,5 @@
 #include "Tone.h"
-#include "Thread.h"
+//#include "Thread.h"
 
 const int buzzer1 = 7; //buzzer to arduino pin 9
 const int buzzer2 = 8; //buzzer to arduino pin 9
@@ -10,7 +10,7 @@ const int ledPin = 13; //buzzer to arduino pin 9
 Tone Buz1;
 Tone Buz2;
 
-Thread myThread = Thread();
+//Thread myThread = Thread();
 
 // callback for myThread
 void niceCallback(){
@@ -25,11 +25,11 @@ void setup(){
  
  // pinMode(buzzer1, OUTPUT); // Set buzzer - pin 9 as an output
  // pinMode(buzzer2, OUTPUT); // Set buzzer - pin 9 as an output
-  //Buz1.begin(7);
-  Buz2.begin(8);
-
-  myThread.onRun(niceCallback);
-  myThread.setInterval(500);
+  Buz1.begin(7);
+  //Buz2.begin(8);
+ // pinMode(ledPin, OUTPUT);
+ // myThread.onRun(niceCallback);
+ // myThread.setInterval(500);
 }
 
 typedef struct state{
@@ -151,14 +151,16 @@ void handle_state(struct state s)
 }
 
 void loop(){
-  /*
+  
  for (int i = 0; i < SONG_STATES; i++)
  {
    handle_state(song[i]);
  }
- */
- if(myThread.shouldRun())
-   myThread.run();
+ 
+// if(myThread.shouldRun())
+  // myThread.run();
 
-while(1);
+   //Buz1.play(NOTE_AS4, 100);
+
+//while(1);
 }
