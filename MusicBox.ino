@@ -9,10 +9,15 @@ Tone Buz2;
 
 void Error(int T)
 {
-   static bool ledStatus = false;
-  ledStatus = !ledStatus;
-  digitalWrite(ledPin, ledStatus);
-  delay(T);
+  Buz1.stop();
+  Buz2.stop();
+  while (1)
+  {
+    static bool ledStatus = false;
+    ledStatus = !ledStatus;
+    digitalWrite(ledPin, ledStatus);
+    delay(T);
+  }
 }
 
 
@@ -64,18 +69,10 @@ public:
     return TimeForNextNote;
   }
 
-  void ReduceTimeForNextNote(int Time)
+  int IsDone()
   {
-    if (Time == TimeForNextNote)
-    {
-      CurrentNote++;
-      TimeForNextNote = Notes[CurrentNote].time + Notes[CurrentNote].silence;
-    }
-    else {
-      TimeForNextNote -= Time;
-    }
+    return (CurrentNote == NumOfNotes);
   }
- 
 };
 
 
@@ -88,10 +85,6 @@ void setup(){
 }
 
 
-
-#define M 650
-
-
 typedef struct state{
   uint16_t buz1Sound;
   uint16_t buz2Sound;
@@ -100,39 +93,39 @@ typedef struct state{
 } state;
 
 state song[] {
-  /*
-  {0, NOTE_DS4, M, 70},
-  {0, NOTE_DS4, M, 70},
-  {0, NOTE_DS4, M, 70},
-  {0, NOTE_AS3, M, 70},
- {0, NOTE_FS3, M + 50, 70},
+
+  // OPENING
+  
+  {0, NOTE_DS4, 650, 70},
+  {0, NOTE_DS4, 650, 70},
+  {0, NOTE_DS4, 650, 70},
+  {0, NOTE_AS3, 650, 70},
+ {0, NOTE_FS3, 650, 70},
 {0, NOTE_CS4, 300, 70},
-  {0, NOTE_B3, 800, 1000},
+  {0, NOTE_B3, 900, 1000},
  {0, NOTE_AS3, 350, 30},
   {0, NOTE_DS4, 700, 70},
-  {0, NOTE_DS4, 1000, 70},
+  {0, NOTE_DS4, 950, 130},
  {0, NOTE_AS3, 300, 30},
   {0, NOTE_DS4, 600, 70},
   {0, NOTE_AS3, 600, 30},
   {0, NOTE_FS3, 700, 70},
   {0, NOTE_CS4, 900, 70},
-    {0, NOTE_FS3, 1000, 700},
-*/
+  {0, NOTE_FS3, 1000, 2000},
 
-/*
 {0, NOTE_FS4, 1350, 50},
 {0, NOTE_F4, 310, 30},
 {0, NOTE_DS4, 1000, 20},
 
-{0, NOTE_DS4, 400, 80},
-{0, NOTE_CS4, 500, 80},
+{0, NOTE_DS4, 400, 50},
+{0, NOTE_CS4, 400, 50},
 
-{0, NOTE_GS2, 500, 400},
-{0, NOTE_CS3, 150, 300},
-{0, NOTE_CS3, 150, 300},
-{0, NOTE_DS3 + 8, 300, 300},
-*/
-/*
+{0, NOTE_DS3, 450, 450},
+{0, NOTE_CS4, 250, 200},
+{0, NOTE_FS4, 250, 75},
+{0, NOTE_DS4, 200, 1225},
+
+
 {0, NOTE_FS5, 240, 0},
 {0, NOTE_DS5, 240, 0},
 {0, NOTE_CS5, 240, 0},
@@ -144,9 +137,9 @@ state song[] {
 {0, NOTE_CS5, 230, 10},
 {0, NOTE_AS4, 400, 50},
 {0, NOTE_AS5, 800, 0},
-*/
-// 0
-/*
+
+
+
 {0, NOTE_AS4, 460, 190},
 {0, NOTE_AS4, 180, 90}, 
 {0, NOTE_AS4, 250, 200}, 
@@ -156,7 +149,7 @@ state song[] {
 {0, NOTE_DS4, 210, 250},
 
 {0, NOTE_DS4, 150, 70},
-*/
+
 
 {0, NOTE_DS4, 150, 75},
 {0, NOTE_AS4, 150, 75},
@@ -171,18 +164,8 @@ state song[] {
 
 {0, NOTE_FS4, 240, 110}, // *
 {0, NOTE_DS4, 110, 75},
-// **
-/*
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-{0, NOTE_FS5, 50, 400},
-*/
-//{0, 0, 1000, 0},
+
+
 };
 
 #define SONG_STATES (sizeof(song) / sizeof (state))
@@ -209,24 +192,55 @@ void handle_state(struct state s)
 }
 
 
+void Checkval(int a, int b)
+{
+  if (a != b)
+  {
+    Buz1.stop();
+    Buz2.stop();
+    while (1)
+    {
+      static bool ledStatus = false;
+      ledStatus = !ledStatus;
+      digitalWrite(ledPin, ledStatus);
+      delay(100);
+    }
+  }
+}
+
+
 
 Note song1[] {
-{NOTE_DS4, 50, 75},
-{NOTE_DS4, 50, 75},
-{NOTE_DS4, 50, 75},
-{NOTE_DS4, 50, 75},
-{NOTE_DS4, 50, 300},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
 };
 
 Note song2[] {
-{NOTE_DS4, 150, 75},
-{NOTE_AS4, 150, 75},
-{NOTE_GS4, 150, 75},
-{NOTE_AS4, 150, 75},
-{NOTE_GS4, 150, 300},
+{NOTE_FS4, 1350, 50},
+{NOTE_F4, 310, 30},
+{NOTE_DS4, 1000, 20},
+
+{NOTE_DS4, 400, 50},
+{NOTE_CS4, 400, 50},
+
+{NOTE_DS3, 450, 450},
+{NOTE_CS4, 250, 200},
+{NOTE_FS4, 250, 75},
+{NOTE_DS4, 200, 1225},
 };
 
 #define NOTES (sizeof(song1) / sizeof (Note))
+
+
 
 void loop(){
 int minTime;
@@ -234,15 +248,16 @@ BuzzController Control1(&Buz1, song1, NOTES);
 BuzzController Control2(&Buz2, song2, NOTES);
 
 
-for (int i = 0; i < NOTES; i++)
+while(!Control1.IsDone() && !Control2.IsDone())
 {
+  //Error(1000);
   minTime = min(Control1.GetTimeForNextNote(), Control2.GetTimeForNextNote());
-  Control1.Play();
-  Control1.ReduceTimeForNextNote(minTime);
+  Control1.Play(minTime);
+  Control2.Play(minTime);
   delay(minTime);
 }
 
-
+ Error(1000);
 
 
 while(1);
@@ -259,11 +274,14 @@ Buz1.play(NOTE_GS4);
 delay(500);
 Buz1.stop();
 
-while(1);
-  
  for (int i = 0; i < SONG_STATES; i++)
  {
    handle_state(song[i]);
  }
+
+
+while(1);
+  
+
 
 }
