@@ -2,7 +2,7 @@
 
 Note melody[] {
 	
-	// OPENING
+	// OPENING 1
 	{NOTE_DS4, 650, 70},
 	{NOTE_DS4, 650, 70},
 	{NOTE_DS4, 650, 70},
@@ -20,60 +20,88 @@ Note melody[] {
 	{NOTE_CS4, 900, 70},
 	{NOTE_FS3, 1100, 2000}, // 147700
 
-	// OPENING 2
-	{NOTE_FS4, 1350, 50},
-	{NOTE_F4, 310, 30},
-	{NOTE_DS4, 1000, 20},
 
+	// OPENING 2 // 13U = 5850
+	{NOTE_FS4, 1300, 50},
+	{NOTE_F4, 310, 30},
+	{NOTE_DS4, 990, 20}, // 6U
 	{NOTE_DS4, 400, 50},
 	{NOTE_CS4, 400, 50},
-
-	{NOTE_DS3, 450, 450},
+	{NOTE_DS3, 450, 450}, // 4U
 	{NOTE_CS4, 250, 200},
 	{NOTE_FS4, 250, 75},
-	{NOTE_DS4, 200, 1225},
+	{NOTE_DS4, 200, 1725}, // 3U
 
 
+	// OPENING 3 + DRUMS // 8.5U = 3825
+	{NOTE_FS4, 1300, 50},
+	{NOTE_F4, 310, 30},
+	{NOTE_DS4, 990, 20}, // 6U
 
-	// HAAA HAHAHAAAAAAAA
-	{NOTE_FS5, 240, 0},
-	{NOTE_DS5, 240, 0},
-	{NOTE_CS5, 240, 0},
-	{NOTE_DS5, 240, 0},
-	{NOTE_FS5, 240, 0},
-	{NOTE_DS5, 240, 0},
-	{NOTE_CS5, 240, 0},
-	{NOTE_DS5, 240, 0},
-	{NOTE_CS5, 230, 10},
+	{NOTE_DS4, 400, 50},
+	{NOTE_CS4, 400, 275}, // 2.5 (round to 3 in drums)
+
+	// HAAA HAHAHAAAAAAAA // 7U = 3150
+	
+	{NOTE_FS5, 225, 0},
+	{NOTE_DS5, 225, 0},
+	{NOTE_CS5, 225, 0},
+	{NOTE_DS5, 225, 0},
+	{NOTE_FS5, 225, 0},
+	{NOTE_DS5, 225, 0},
+	{NOTE_CS5, 225, 0},
+	{NOTE_DS5, 225, 0},
+	{NOTE_CS5, 225, 0},
 	{NOTE_AS4, 400, 50},
-	{NOTE_AS5, 800, 100},
+	{NOTE_AS5, 500, 400},
+	
 
 
+// HONEY YOU KNOW I LOVE YOU // 12U
+{NOTE_AS4, 450, 225},
+{NOTE_AS4, 200, 25}, 
+{NOTE_AS4, 200, 250}, //3U
 
-{NOTE_AS4, 460, 190},
-{NOTE_AS4, 180, 90}, 
-{NOTE_AS4, 250, 200}, 
-
-{NOTE_FS4, 200, 130},// 430
-{NOTE_F4, 170, 170},//20 + 225 + 245
+{NOTE_FS4, 200, 130},
+{NOTE_F4, 170, 170},
 {NOTE_DS4, 210, 250},
 
 {NOTE_DS4, 150, 70},
-
-
-{NOTE_DS4, 150, 75},
+{NOTE_DS4, 150, 70},
 {NOTE_AS4, 150, 75},
 {NOTE_GS4, 150, 75},
 {NOTE_AS4, 150, 75},
 {NOTE_GS4, 150, 300},
 
-{NOTE_AS4, 150, 75}, // *
+{NOTE_AS4, 150, 75}, 
 {NOTE_AS4, 150, 75},
-{NOTE_AS4, 150, 75}, // *
+{NOTE_AS4, 150, 75},
 {NOTE_DS4, 150, 75},
 
-{NOTE_FS4, 240, 110}, // *
-{NOTE_DS4, 110, 75},
+{NOTE_FS4, 300, 50}, 
+{NOTE_DS4, 300, 7500},
 
+
+
+// CAUSE I DON'T UNDERSTAND YOU
+{NOTE_DS5, 110, 75},
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,11 @@
 #pragma once
 
 Note drums[] {
-{NOTE_DS2, 50, 14720},
+{NOTE_DS2, 1, 14769}, // OPENING 1
+{NOTE_DS2, 1, 7149}, // OPENING 2
+
+// OPENING 3
+
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -9,6 +13,11 @@ Note drums[] {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400}, 
+
+
+
+// HAAA HAHAHAAAAAAAA
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -16,11 +25,11 @@ Note drums[] {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
+{NOTE_CS5, 50, 175},
+{NOTE_CS5, 50, 62},
+{NOTE_CS5, 50, 63},
+
+
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -36,3 +45,18 @@ Note drums[] {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
