@@ -1,7 +1,7 @@
 #pragma once
 
 Note melody[] {
-	
+	/*
 	// OPENING 1
 	{NOTE_DS4, 650, 70},
 	{NOTE_DS4, 650, 70},
@@ -42,7 +42,7 @@ Note melody[] {
 	{NOTE_CS4, 400, 275}, // 2.5 (round to 3 in drums)
 
 	// HAAA HAHAHAAAAAAAA // 7U = 3150
-	
+*/	
 	{NOTE_FS5, 225, 0},
 	{NOTE_DS5, 225, 0},
 	{NOTE_CS5, 225, 0},
@@ -57,7 +57,7 @@ Note melody[] {
 	
 
 
-// HONEY YOU KNOW I LOVE YOU // 12U
+// OH I KNOW I LOVE YOU // 12U
 {NOTE_AS4, 450, 225},
 {NOTE_AS4, 200, 25}, 
 {NOTE_AS4, 200, 250}, //3U
@@ -78,14 +78,99 @@ Note melody[] {
 {NOTE_AS4, 150, 75},
 {NOTE_DS4, 150, 75},
 
-{NOTE_FS4, 300, 50}, 
-{NOTE_DS4, 300, 7500},
+{NOTE_FS4, 250, 100}, 
+{NOTE_DS4, 150, 1975}, // 5.5U
+
+
+//{NOTE_DS5, 10, 265},
+// CAUSE I DON'T UNDERSTAND YOU /6U
+
+{NOTE_DS5, 150, 75},
+{NOTE_CS5, 150, 75},
+{NOTE_DS5, 150, 75},
+{NOTE_AS4, 300, 150},
+{NOTE_AS4, 200, 137},
+{NOTE_GS4, 125, 213},
+{NOTE_AS4, 325, 800},
+
+
+// OH YOU // 8U
+{NOTE_AS4, 350, 100},
+{NOTE_GS4, 150, 75},
+{NOTE_AS4, 150, 75},
+{NOTE_GS4, 150, 75},
+{NOTE_AS4, 150, 75},
+{NOTE_GS4, 150, 75},
+{NOTE_DS3, 150, 75},
+{NOTE_CS3, 150, 75},
+{NOTE_DS3, 150, 1200},
+
+
+//{NOTE_DS3, 1, 1574},
+
+// WHEN WE FIRST MET
+{NOTE_DS4, 56, 56}, // 0.25u 112
+{NOTE_FS4, 150, 75}, // 0.50u
+{NOTE_AS4, 300, 38}, // 338 0.75u  // 1.5U
+
+{NOTE_AS4, 200, 925},
+
+// I WILL NEVER FORGET
+{NOTE_DS4, 56, 56}, 
+{NOTE_CS4, 56, 57},
+{NOTE_DS4, 56, 56}, 
+{NOTE_FS4, 56, 57}, 
+{NOTE_AS4, 56, 56}, 
+{NOTE_AS4, 132, 1556},
+
+
+// CAUSE EVEN THOUGH I DIDN'T KNOW YOU YET
+{NOTE_AS4, 150, 75}, // 0.50u
+
+{NOTE_GS4, 150, 75}, // 0.50u
+{NOTE_FS4, 57, 56}, // 0.25u
+{NOTE_FS4, 112, 112}, // 0.55u
+
+{NOTE_GS4, 150, 75}, // 0.50u	
+{NOTE_GS4, 150, 75}, // 0.50u
+{NOTE_FS4, 150, 75}, // 0.50u
+{NOTE_CS5, 150, 75}, // 0.50u
+{NOTE_B4, 150, 75}, // 0.50u
+{NOTE_AS4, 255, 983}, // 0.50u
+
+
+// WE WERE BOUND TOGETHER
+{NOTE_AS4, 400, 50},
+{NOTE_GS4, 150, 75},
+
+{NOTE_A4, 500, 175},
+{NOTE_AS4, 150, 75}, // 0.50u
+{NOTE_FS4, 57, 56}, // 0.25u
+{NOTE_DS4, 250, 312}, // 0.25u
+
+// THEN AND FOREVER
+{NOTE_GS4, 400, 50},
+{NOTE_GS4, 350, 100},
+{NOTE_AS4, 150, 75},
+{NOTE_FS4, 57, 56},
+{NOTE_DS4, 250, 312},
+
+
+// AND I COULD EVER LET YOU GOOO
+{NOTE_GS4, 400, 50},
+{NOTE_GS4, 350, 100},
+{NOTE_FS4, 150, 75},
+{NOTE_AS4, 57, 56},
+{NOTE_AS4, 250, 87},
+
+{NOTE_AS4, 200, 137},
+{NOTE_FS4, 250, 88},
+{NOTE_DS4, 250, 400},
 
 
 
-// CAUSE I DON'T UNDERSTAND YOU
-{NOTE_DS5, 110, 75},
 
+//{NOTE_AS3, 1, 9999}
 };
 
 
