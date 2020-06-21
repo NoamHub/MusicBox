@@ -1,7 +1,7 @@
 #pragma once
+#include "stdio.h"
 
 void Error(int T);
-
 
 typedef struct Note{
   uint16_t sound;
@@ -11,16 +11,18 @@ typedef struct Note{
 
 class BuzzController{
  Tone* Buzz;
- Note* Notes;
+ const Note* Notes;
+ Note CurrentNote;
  int NumOfNotes;
  int TimeForNextNote;
- int CurrentNote;
+ int CurrentNoteIndex;
  bool ShouldPlay;
 
 public: 
-  BuzzController(Tone* Buzz, Note* Notes, int NumOfNotes) : CurrentNote(0), Buzz(Buzz), Notes(Notes), NumOfNotes(NumOfNotes)
+  BuzzController(Tone* Buzz, const Note* Notes, int NumOfNotes) : CurrentNoteIndex(0), Buzz(Buzz), Notes(Notes), NumOfNotes(NumOfNotes)
   {
-    TimeForNextNote = Notes[CurrentNote].time + Notes[CurrentNote].silence;
+    memcpy_P(&CurrentNote, &Notes[CurrentNoteIndex], sizeof(Note)); 
+    TimeForNextNote = CurrentNote.time + CurrentNote.silence;
     ShouldPlay = true;
   }
 
@@ -31,14 +33,14 @@ public:
       
     if (ShouldPlay)
     {
-      Buzz->play(Notes[CurrentNote].sound + 10, Notes[CurrentNote].time);
+      Buzz->play(CurrentNote.sound + 10,CurrentNote.time);
       ShouldPlay = false;
     }
 
     if (TimeForNextNote == TimeToRecude)
     {
-      CurrentNote++;
-      TimeForNextNote = Notes[CurrentNote].time + Notes[CurrentNote].silence;
+      memcpy_P(&CurrentNote, &Notes[++CurrentNoteIndex], sizeof(Note)); 
+      TimeForNextNote = CurrentNote.time + CurrentNote.silence;
       ShouldPlay = true;
     }
     else
@@ -52,6 +54,6 @@ public:
 
   int IsDone()
   {
-    return (CurrentNote == NumOfNotes);
+    return (CurrentNoteIndex == NumOfNotes);
   }
 };

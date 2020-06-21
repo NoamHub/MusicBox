@@ -1,7 +1,7 @@
 #pragma once
 
-Note melody[] {
-	
+const static Note melody[] PROGMEM = {
+	/*
 	// OPENING 1
 	{NOTE_DS4, 650, 70},
 	{NOTE_DS4, 650, 70},
@@ -32,7 +32,7 @@ Note melody[] {
 	{NOTE_FS4, 250, 75},
 	{NOTE_DS4, 200, 1725}, // 3U
 
-
+*/
 	// OPENING 3 + DRUMS // 8.5U = 3825
 	{NOTE_FS4, 1300, 50},
 	{NOTE_F4, 310, 30},
@@ -41,9 +41,8 @@ Note melody[] {
 	{NOTE_DS4, 400, 50},
 	{NOTE_CS4, 400, 275}, // 2.5 (round to 3 in drums)
 
-	// HAAA HAHAHAAAAAAAA // 7U = 3150
-	
 
+	// HAAA HAHAHAAAAAAAA // 7U = 3150
 
 	{NOTE_FS5, 225, 0},
 	{NOTE_DS5, 225, 0},
@@ -57,7 +56,7 @@ Note melody[] {
 	{NOTE_AS4, 400, 50},
 	{NOTE_AS5, 500, 400},
 	
-
+/*
 
 // OH I KNOW I LOVE YOU // 12U
 {NOTE_AS4, 450, 225},

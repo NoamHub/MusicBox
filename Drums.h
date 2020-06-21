@@ -1,11 +1,11 @@
 #pragma once
 
-Note drums[] {
-	
+const static Note drums[] PROGMEM = {
+/*
 {NOTE_DS2, 1, 14769}, // OPENING 1
 
 {NOTE_DS2, 1, 7149}, // OPENING 2
-
+*/
 /*
 // OPENING 2 ALTERNATIVE WITH BASS
 {NOTE_DS2, 1, 3599}, 
@@ -29,8 +29,9 @@ Note drums[] {
 
 
 
-{NOTE_DS2, 1, 224},
+//{NOTE_DS2, 1, 224},
 // HAAA HAHAHAAAAAAAA
+{NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},

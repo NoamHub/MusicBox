@@ -71,36 +71,13 @@ void delayInLoop(long microSeconds)
 }
 
 void loop(){
-/*
-Buz1.play(NOTE_AS4, 500);
-//Buz2.play(NOTE_AS4, 500);
-Buz3.play(NOTE_AS4, 500);
-delayInLoop(1000);
 
-Buz1.play(NOTE_AS3, 500);
-//Buz2.play(NOTE_AS3, 400);
-Buz3.play(NOTE_AS3, 300);
-
-while(1);
-  */
 int minTime;
 BuzzController Control1(&Buz1, drums, NUM_OF(drums));
 BuzzController Control2(&Buz2, melody, NUM_OF(melody));
 //BuzzController Control3(&Buz3, melody, NUM_OF(melody));
 
-
-if (0)
-{
-  while(!Control2.IsDone())
-  {
-    minTime = (Control2.GetTimeForNextNote());
-    Control2.Play(minTime);
-    delay(minTime);
-  }
-}
-else 
-{
-  //while(!Control1.IsDone() && !Control2.IsDone(), !Control3.IsDone())
+  
   while(!Control1.IsDone() && !Control2.IsDone())
   {
     //Error(1000);
@@ -111,7 +88,6 @@ else
    // Control3.Play(minTime);
     delay(minTime);
   }
-}
 
 Error(1000);
 
