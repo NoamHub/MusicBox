@@ -232,7 +232,7 @@ const static Note melody[] PROGMEM = {
 {NOTE_CS5, 300, 37},
 
 {NOTE_B4, 713, 300},
-
+*/
 
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
 {NOTE_AS4, 400, 50},
@@ -338,6 +338,7 @@ const static Note melody[] PROGMEM = {
 {NOTE_CS3, 76, 36}, 
 {NOTE_DS4, 127, 436},
 
+/*
 
 // WHEN WE ARE TOGETHER 
 {NOTE_AS4, 450, 225},
@@ -393,7 +394,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_DS4, 150, 75},
 
 
-
 // IT'S BEEN SOME TIME
 {NOTE_DS4, 400, 50}, 
 {NOTE_FS4, 400, 50}, 
@@ -412,6 +412,8 @@ const static Note melody[] PROGMEM = {
 {NOTE_FS4, 400, 50}, 
 
 
+
+
 // AS IF THE STARS HAVE STARTED TO ALIGN
 {NOTE_AS4, 400, 50}, 
 {NOTE_GS4, 150, 75}, 
@@ -422,9 +424,8 @@ const static Note melody[] PROGMEM = {
 {NOTE_FS4, 150, 75},
 {NOTE_AS4, 150, 75}, 
 {NOTE_GS4, 150, 75},
-{NOTE_FS4, 76, 36},
-{NOTE_DS4, 100, 913}, 
-
+{NOTE_FS4, 76, 0},
+{NOTE_DS4, 136, 913}, 
 
 
 // WE ARE BOUND TOGETHER
@@ -472,7 +473,6 @@ const static Note melody[] PROGMEM = {
 
 
 {NOTE_CS5, 287, 50},
-//{NOTE_B4, 300, 712},
 {NOTE_B4, 300, 150},
 
 {NOTE_AS3, 150, 75},
@@ -485,8 +485,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_AS3, 150, 75},
 
 
-//{NOTE_AS4, 1, 224},
-
 // WHAT DO YOU THINK ABOUT THINGS 
 {NOTE_AS4, 150, 75},
 {NOTE_GS4, 150, 75},
@@ -496,12 +494,8 @@ const static Note melody[] PROGMEM = {
 {NOTE_FS4, 150, 75}, 
 {NOTE_DS4, 150, 75}, 
 
-
-
 // BELIEVE ME
 {NOTE_DS4, 150, 75}, 
-
-
 {NOTE_DS5, 150, 75}, 
 {NOTE_DS5, 300, 150}, 
 
@@ -509,7 +503,6 @@ const static Note melody[] PROGMEM = {
 // BASS
 {NOTE_AS2, 150, 75},
 {NOTE_CS3, 450, 0},
-//{NOTE_DS3, 150, 0},
 
 
 // I WILL ALWAYS BE THERE SO	
@@ -570,7 +563,8 @@ const static Note melody[] PROGMEM = {
 {NOTE_GS4, 450, 225}, 
 {NOTE_F4, 225, 0}, 
 {NOTE_DS4, 225, 0}, 
-{NOTE_F4, 450, 1350}, 
+{NOTE_F4, 450, 900}, 
+
 
 // THEEERRRE
 {NOTE_GS4, 150, 75}, 
@@ -592,12 +586,20 @@ const static Note melody[] PROGMEM = {
 
 // I CAN'T WAIT TO KNOW
 {NOTE_F5, 300, 37},
-{NOTE_C5, 300, 37},
+{NOTE_C5, 301, 37},
 {NOTE_GS4, 400, 50},
 {NOTE_DS5, 400, 50},
-{NOTE_CS5, 900, 1125},
+//{NOTE_CS5, 900, 1125},
+{NOTE_CS5, 600, 75},
 
+{NOTE_C4, 77, 36},
+{NOTE_AS3, 150, 75}, 
+{NOTE_GS3, 150, 75}, 
+{NOTE_AS3, 300, 37}, 
+{NOTE_C4, 150, 75},
+{NOTE_AS3, 150, 75},
 
+// WHAT DO YOU THINK ABOUT THINGS
 {NOTE_C5, 150, 75},
 {NOTE_AS4, 150, 75},
 {NOTE_C5, 150, 75},
@@ -608,17 +610,13 @@ const static Note melody[] PROGMEM = {
 
 // BELIEVE ME
 {NOTE_F4, 150, 75}, 
-
-
 {NOTE_F5, 150, 75}, 
 {NOTE_F5, 270, 180}, 
-
 
 // BASS
 {NOTE_C4, 150, 75},
 {NOTE_DS4, 77, 36}, 
 {NOTE_F4, 300, 37 },
-
 
 // I WILL ALWAYS BE THERE SO	
 {NOTE_AS4, 77, 36}, 
@@ -630,7 +628,7 @@ const static Note melody[] PROGMEM = {
 {NOTE_DS5, 300, 37},
 
 {NOTE_CS5, 713, 300},
-*/
+
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
 {NOTE_C5, 400, 50},
 {NOTE_C5, 400, 50},
@@ -645,11 +643,12 @@ const static Note melody[] PROGMEM = {
 {NOTE_F4, 450, 450}, 
 
 
-
 // ENDING
 {NOTE_DS4, 400, 50}, 
 {NOTE_E4, 300, 37}, 
 {NOTE_F4, 420, 0}, 
+/*
+*/
 
 };
 

@@ -118,7 +118,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-*/
+
  {NOTE_DS2, 1, 224},
 // CAUSE EVEN THOUGH I DIDN'T KNOW YOU YET
 
@@ -159,6 +159,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 175},
 {NOTE_DS3, 50, 400},
 
+
 // BABY! I CAN'T TO KNOW
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -201,7 +202,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-
+*/
 
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
 
@@ -224,7 +225,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_CS5, 50, 62},
 
 
-{NOTE_CS5, 50, 400},
+{NOTE_DS2, 50, 175},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -256,6 +257,8 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 175},
+
 
 
 // WHEN WE ARE TOGETHER
@@ -278,7 +281,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-
+/*
 
 // THREE BIRDS OF A FEATHER
 {NOTE_DS2, 50, 400},
@@ -300,6 +303,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 
 
+
 // IT'S BEEN SOME TIME AND THOUGH HARD TO DEFINE
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -313,7 +317,6 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 
 
-
 // AS IF THE STARS HAVE STARTED TO ALIGN
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -322,7 +325,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
-
+{NOTE_DS2, 50, 400},
 
 
 //{NOTE_DS2, 1, 224},
@@ -335,32 +338,32 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 400},
 
-
-{NOTE_DS2, 1, 224},
 // AND I COULD NEVER LET YOU GO
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
+
+{NOTE_DS3, 50, 52}, 
+{NOTE_DS2, 50, 53},
+{NOTE_DS2, 50, 52}, 
+{NOTE_DS3, 50, 235},
+{NOTE_DS3, 50, 53},
+{NOTE_DS2, 50, 52}, 
+{NOTE_DS2, 50, 53},
+{NOTE_DS3, 50, 400}, 
 
 
 
 // BABY! I CAN'T TO KNOW
+{NOTE_DS2, 50, 175},
+{NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-//{NOTE_DS2, 50, 175},
-//{NOTE_AS2, 150, 75},
-//{NOTE_CS3, 400, 50},
-//{NOTE_DS3, 400, 50},
-
-
-{NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -391,7 +394,6 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
-
 
 
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
@@ -438,11 +440,14 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 
 
-// THEEEEERE BABYYYYYYY
+// THEEEEERE 
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
+
+
+// BABYYYYYYY
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -455,8 +460,6 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-
-
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -465,7 +468,6 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
-
 
 // BELIVE ME I WILL ALWAYS BE THERE SO
 {NOTE_DS2, 50, 400},
@@ -478,8 +480,6 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-
-
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN + ENDING
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -488,22 +488,16 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
-{NOTE_DS2, 50, 400},
+{NOTE_DS2, 50, 175},
 
 
 // ENDING
 {NOTE_DS5, 400, 50}, 
 {NOTE_E5, 300, 37}, 
 {NOTE_F5, 420, 0}, 
-
-
-};
-
 /*
-{NOTE_AS2, 200, 400},
-{NOTE_CS3, 200, 400},
-{NOTE_D3, 200, 4000},
 */
+};
 
 
 
