@@ -1,62 +1,59 @@
 #pragma once
 
 const static Note melody[] PROGMEM = {
-	/*
-	// OPENING 1
-	{NOTE_DS4, 650, 70},
-	{NOTE_DS4, 650, 70},
-	{NOTE_DS4, 650, 70},
-	{NOTE_AS3, 650, 70},
-	{NOTE_FS3, 650, 70},
-	{NOTE_CS4, 300, 70},
-	{NOTE_B3, 900, 1200}, 
-	{NOTE_AS3, 350, 30},
-	{NOTE_DS4, 700, 70},
-	{NOTE_DS4, 950, 130},
-	{NOTE_AS3, 300, 30},
-	{NOTE_DS4, 600, 70},
-	{NOTE_AS3, 600, 30},
-	{NOTE_FS3, 700, 70},
-	{NOTE_CS4, 900, 70},
-	{NOTE_FS3, 1100, 2000}, // 147700
 
-	// OPENING 2 // 13U = 5850
-	
-	{NOTE_FS4, 1300, 50},
-	{NOTE_F4, 310, 30},
-	{NOTE_DS4, 990, 20}, // 6U
-	{NOTE_DS4, 400, 50},
-	{NOTE_CS4, 400, 50},
-	{NOTE_DS3, 450, 450}, // 4U
-	{NOTE_CS4, 250, 200},
-	{NOTE_FS4, 250, 75},
-	{NOTE_DS4, 200, 1725}, // 3U
+// OPENING 1
+{NOTE_DS4, 650, 70},
+{NOTE_DS4, 650, 70},
+{NOTE_DS4, 650, 70},
+{NOTE_AS3, 650, 70},
+{NOTE_FS3, 650, 70},
+{NOTE_CS4, 300, 70},
+{NOTE_B3, 900, 1200}, 
+{NOTE_AS3, 350, 30},
+{NOTE_DS4, 700, 70},
+{NOTE_DS4, 950, 130},
+{NOTE_AS3, 300, 30},
+{NOTE_DS4, 600, 70},
+{NOTE_AS3, 600, 30},
+{NOTE_FS3, 700, 70},
+{NOTE_CS4, 900, 70},
+{NOTE_FS3, 1100, 2000}, // 147700
 
-*/
-/*
-	// OPENING 3 + DRUMS // 8.5U = 3825
-	{NOTE_FS4, 1300, 50},
-	{NOTE_F4, 310, 30},
-	{NOTE_DS4, 990, 20}, // 6U
+// OPENING 2 // 13U = 5850
 
-	{NOTE_DS4, 400, 50},
-	{NOTE_CS4, 400, 275}, // 2.5 (round to 3 in drums)
+{NOTE_FS4, 1300, 50},
+{NOTE_F4, 310, 30},
+{NOTE_DS4, 990, 20}, // 6U
+{NOTE_DS4, 400, 50},
+{NOTE_CS4, 400, 50},
+{NOTE_DS3, 450, 450}, // 4U
+{NOTE_CS4, 250, 200},
+{NOTE_FS4, 250, 75},
+{NOTE_DS4, 200, 1725}, // 3U
+
+// OPENING 3 + DRUMS // 8.5U = 3825
+{NOTE_FS4, 1300, 50},
+{NOTE_F4, 310, 30},
+{NOTE_DS4, 990, 20}, // 6U
+
+{NOTE_DS4, 400, 50},
+{NOTE_CS4, 400, 275}, // 2.5 (round to 3 in drums)
 
 
-	// HAAA HAHAHAAAAAAAA // 7U = 3150
+// HAAA HAHAHAAAAAAAA // 7U = 3150
+{NOTE_FS5, 225, 0},
+{NOTE_DS5, 225, 0},
+{NOTE_CS5, 225, 0},
+{NOTE_DS5, 225, 0},
+{NOTE_FS5, 225, 0},
+{NOTE_DS5, 225, 0},
+{NOTE_CS5, 225, 0},
+{NOTE_DS5, 225, 0},
+{NOTE_CS5, 225, 0},
+{NOTE_AS4, 400, 50},
+{NOTE_AS5, 500, 400},
 
-	{NOTE_FS5, 225, 0},
-	{NOTE_DS5, 225, 0},
-	{NOTE_CS5, 225, 0},
-	{NOTE_DS5, 225, 0},
-	{NOTE_FS5, 225, 0},
-	{NOTE_DS5, 225, 0},
-	{NOTE_CS5, 225, 0},
-	{NOTE_DS5, 225, 0},
-	{NOTE_CS5, 225, 0},
-	{NOTE_AS4, 400, 50},
-	{NOTE_AS5, 500, 400},
-	
 
 
 // OH I KNOW I LOVE YOU // 12U
@@ -96,6 +93,7 @@ const static Note melody[] PROGMEM = {
 {NOTE_AS4, 325, 800},
 
 
+
 // OH YOU // 8U
 {NOTE_AS4, 350, 100},
 {NOTE_GS4, 150, 75},
@@ -106,7 +104,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_DS3, 150, 75},
 {NOTE_CS3, 150, 75},
 {NOTE_DS3, 150, 1200},
-
 
 //{NOTE_DS3, 1, 1574},
 
@@ -232,7 +229,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_CS5, 300, 37},
 
 {NOTE_B4, 713, 300},
-*/
 
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
 {NOTE_AS4, 400, 50},
@@ -249,7 +245,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_FS4, 150, 75},
 
 {NOTE_DS4, 150, 1200}, 
-
 
 // SOLO
 {NOTE_CS4, 300, 37},
@@ -299,8 +294,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_CS4, 76, 36}, 
 {NOTE_DS4, 127, 211},
 
-
-
 {NOTE_GS4, 400, 50}, 
 {NOTE_AS4, 300, 38},
 {NOTE_B4, 200, 137},
@@ -309,7 +302,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_CS3, 77, 36},
 {NOTE_D3, 76, 36}, 
 {NOTE_DS4, 150, 75}, 
-
 
 
 {NOTE_B4, 150, 75}, 
@@ -338,8 +330,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_CS3, 76, 36}, 
 {NOTE_DS4, 127, 436},
 
-/*
-
 // WHEN WE ARE TOGETHER 
 {NOTE_AS4, 450, 225},
 {NOTE_AS4, 200, 25}, 
@@ -366,7 +356,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_DS4, 150, 75},
 {NOTE_DS4, 150, 1875}, 
 
-
 // THREE BIRDS OF A FEATHER
 {NOTE_DS5, 400, 50}, 
 {NOTE_CS5, 400, 50}, 
@@ -380,7 +369,6 @@ const static Note melody[] PROGMEM = {
 
 
 // I JUST HOPE YOU ENJOY OUR COMPANY
-
 {NOTE_AS3, 150, 75}, 
 {NOTE_CS4, 150, 75},
 {NOTE_GS4, 350, 100},
@@ -391,7 +379,7 @@ const static Note melody[] PROGMEM = {
 {NOTE_AS4, 150, 75},
 {NOTE_AS3, 150, 75},
 {NOTE_FS4, 150, 75},
-{NOTE_DS4, 150, 75},
+{NOTE_DS4, 200, 475},
 
 
 // IT'S BEEN SOME TIME
@@ -410,8 +398,6 @@ const static Note melody[] PROGMEM = {
 {NOTE_AS4, 400, 50}, 
 {NOTE_GS4, 400, 50}, 
 {NOTE_FS4, 400, 50}, 
-
-
 
 
 // AS IF THE STARS HAVE STARTED TO ALIGN
