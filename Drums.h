@@ -118,8 +118,8 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-
-// {NOTE_DS2, 1, 224},
+*/
+ {NOTE_DS2, 1, 224},
 // CAUSE EVEN THOUGH I DIDN'T KNOW YOU YET
 
 {NOTE_DS2, 50, 400},
@@ -437,7 +437,7 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 
-*/
+
 // THEEEEERE BABYYYYYYY
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -467,7 +467,6 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 
 
-//{NOTE_DS2, 1, 224},
 // BELIVE ME I WILL ALWAYS BE THERE SO
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
