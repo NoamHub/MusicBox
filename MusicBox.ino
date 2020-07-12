@@ -8,6 +8,8 @@ const int buzz1Pin = 7;
 const int buzz2Pin = 8;
 //const int buzz3Pin = 6;
 const int ledPin = 13;
+const int buttonPin = 2;
+const int lightPin = 3;
 
 Tone Buz1;
 Tone Buz2;
@@ -31,10 +33,9 @@ void Error(int T)
 void setup(){
   Buz1.begin(buzz1Pin);
   Buz2.begin(buzz2Pin);
-  //Buz3.begin(buzz3Pin);
   pinMode(ledPin, OUTPUT);
-
-  
+  pinMode(lightPin, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
 }
 
 
@@ -71,11 +72,18 @@ void delayInLoop(long microSeconds)
 }
 
 void loop(){
-
 int minTime;
 BuzzController Control1(&Buz1, drums, NUM_OF(drums));
 BuzzController Control2(&Buz2, melody, NUM_OF(melody));
 //BuzzController Control3(&Buz3, melody, NUM_OF(melody));
+
+int buttonVal = digitalRead(buttonPin);
+
+  while (buttonVal == HIGH) 
+  {
+	delay(100);
+	buttonVal = digitalRead(buttonPin);
+  }
 
   
   while(!Control1.IsDone() && !Control2.IsDone())
@@ -88,6 +96,8 @@ BuzzController Control2(&Buz2, melody, NUM_OF(melody));
    // Control3.Play(minTime);
     delay(minTime);
   }
+  
+  digitalWrite(lightPin, HIGH);
 
 Error(1000);
 

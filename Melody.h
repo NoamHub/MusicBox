@@ -1,7 +1,7 @@
 #pragma once
 
 const static Note melody[] PROGMEM = {
-
+/*
 // OPENING 1
 {NOTE_DS4, 650, 70},
 {NOTE_DS4, 650, 70},
@@ -614,6 +614,8 @@ const static Note melody[] PROGMEM = {
 {NOTE_DS5, 300, 37},
 
 {NOTE_CS5, 713, 300},
+
+*/
 
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
 {NOTE_C5, 400, 50},
