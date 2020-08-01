@@ -442,8 +442,8 @@ const static Note drums[] PROGMEM = {
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 */
+{NOTE_C5, 1, 224},
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN + ENDING
-{NOTE_DS2, 1, 224},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
 {NOTE_DS2, 50, 400},
@@ -457,20 +457,7 @@ const static Note drums[] PROGMEM = {
 // ENDING
 {NOTE_DS5, 400, 50}, 
 {NOTE_E5, 300, 37}, 
-{NOTE_F5, 420, 0}, 
+//{NOTE_F5, 420, 0}, 
 /*
 */
 };
-
-
-
-
-
-
-
-
-
-
-
-
-

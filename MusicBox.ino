@@ -6,14 +6,18 @@
 
 const int buzz1Pin = 7;
 const int buzz2Pin = 8;
-//const int buzz3Pin = 6;
 const int ledPin = 13;
 const int buttonPin = 2;
-const int lightPin = 3;
+
+const int led1Pin = 9;
+const int led2Pin = 10;
+const int led3Pin = 11;
+const int led4Pin = 12;
+const int ledStripPin = 3;
+
 
 Tone Buz1;
 Tone Buz2;
-Tone Buz3;
 
 void Error(int T)
 {
@@ -28,13 +32,31 @@ void Error(int T)
   }
 }
 
+void bassLedCallback()
+{
+  static bool state = false;
+  digitalWrite(led1Pin, state);
+  state = !state;
+  digitalWrite(led2Pin, state);
+}
 
+void melodyLedCallback()
+{
+  static bool state = false;
+  digitalWrite(led3Pin, state);
+  state = !state;
+  digitalWrite(led4Pin, state);
+}
 
 void setup(){
-  Buz1.begin(buzz1Pin);
-  Buz2.begin(buzz2Pin);
+  Buz1.begin(buzz1Pin, bassLedCallback);
+  Buz2.begin(buzz2Pin, melodyLedCallback);
   pinMode(ledPin, OUTPUT);
-  pinMode(lightPin, OUTPUT);
+  pinMode(led1Pin, OUTPUT);
+  pinMode(led2Pin, OUTPUT);
+  pinMode(led3Pin, OUTPUT);
+  pinMode(led4Pin, OUTPUT);
+  pinMode(ledStripPin, OUTPUT);
   pinMode(buttonPin, INPUT_PULLUP);
 }
 
@@ -85,41 +107,52 @@ int buttonVal = digitalRead(buttonPin);
 	buttonVal = digitalRead(buttonPin);
   }
 
+  long time = millis();
+
+  while (buttonVal == LOW) 
+  //if (false)
+  {
+  delay(100);
+  buttonVal = digitalRead(buttonPin);
+  }
+
+  bool longPress = false;
+
+  if (millis() - time > 1000)
+    longPress = true;
+
+ // if (longPress)
+  //  Error(500);
+
+ //  Error(2000);
   
   while(!Control1.IsDone() && !Control2.IsDone())
   {
-    //Error(1000);
     minTime = min(Control1.GetTimeForNextNote(), Control2.GetTimeForNextNote());
-    //minTime = min(minTime, Control3.GetTimeForNextNote());
     Control1.Play(minTime);
     Control2.Play(minTime);
-   // Control3.Play(minTime);
     delay(minTime);
   }
-  
-  digitalWrite(lightPin, HIGH);
+
+  Buz1.play(NOTE_F5, 420);
+  Buz2.play(NOTE_F4, 420);
+  digitalWrite(led1Pin, 1);
+  digitalWrite(led2Pin, 1);
+  digitalWrite(led3Pin, 1);
+  digitalWrite(led4Pin, 1);
+  //digitalWrite(ledStripPin, 1);
+
+delay(420);
+
+  digitalWrite(led1Pin, 0);
+  digitalWrite(led2Pin, 0);
+  digitalWrite(led3Pin, 0);
+  digitalWrite(led4Pin, 0);
+  digitalWrite(ledStripPin, 1);
 
 Error(1000);
 
 
 while(1);
-  
-bool ledStatus = false;
-//Buz2.play(NOTE_AS4, 3000);
-Buz1.play(NOTE_AS4);
-delay(500);
-Buz1.play(NOTE_GS4);
-delay(500);
-Buz1.play(NOTE_AS4);
-delay(500);
-Buz1.play(NOTE_GS4);
-delay(500);
-Buz1.stop();
-
-
-
-while(1);
-  
-
 
 }

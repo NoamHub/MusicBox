@@ -617,6 +617,7 @@ const static Note melody[] PROGMEM = {
 
 */
 
+
 // YOU CAN TELL ME ANYTHING AND I'LL LISTEN
 {NOTE_C5, 400, 50},
 {NOTE_C5, 400, 50},
@@ -634,7 +635,7 @@ const static Note melody[] PROGMEM = {
 // ENDING
 {NOTE_DS4, 400, 50}, 
 {NOTE_E4, 300, 37}, 
-{NOTE_F4, 420, 0}, 
+//{NOTE_F4, 420, 0}, 
 /*
 */
 
